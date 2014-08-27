@@ -8,7 +8,7 @@ describe Meal do
 	end
 
 	it 'belongs to a desert' do 
-		test_desert = Desert.create({:name => 'Slut Brownies'})
+		test_desert = Desert.create({:name => 'Slut Brownies', :yum_factor => 5})
 		test_meal = Meal.create({:desert_id => test_desert.id})
 		expect(test_meal.desert).to eq test_desert
 	end
