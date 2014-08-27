@@ -6,6 +6,11 @@ describe Entree do
 		expect(new_entree.save).to eq false
 	end
 
+	it 'should lowercase the name of an entree' do 
+		new_entree = Entree.create({:name => 'ENCHILADAS'})
+		expect(new_entree.name).to eq 'enchiladas'
+	end
+
 	it 'has many meals' do 
 		test_entree = Entree.create({:name => 'Parmesean Chicken'})
 		test_meal = Meal.create({:entree_id => test_entree.id})
