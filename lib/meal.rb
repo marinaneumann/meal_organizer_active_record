@@ -1,4 +1,4 @@
 class Meal < ActiveRecord::Base
 	belongs_to :entree
-	belongs_to :desert
+	belongs_to :dessert
 end
