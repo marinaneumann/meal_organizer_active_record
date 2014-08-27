@@ -1,6 +1,6 @@
 class Entree < ActiveRecord::Base
-	has_many :meals
-
 	validates :name, :presence => true
+
+	has_many :meals
 
 end
